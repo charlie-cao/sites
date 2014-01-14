@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>全球理财通</title>
+        <meta charset="UTF-8">
+        <meta name="baidu-tc-cerfication" content="b1a8f31a4565cdc91c7b477a55a4b636" />
+        <meta name="viewport" content="width=device-width">
+        <link href="bootstrap.min.css"  rel="stylesheet">
+        <link href="site.min.css"  rel="stylesheet">
+        <style>
+            .carousel .masthead-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                height: 460px;
+                text-shadow: 0 1px 3px rgba(0,0,0,0.4),0 0 30px rgba(0,0,0,0.075);
+                background-repeat: repeat-x;
+                background-image: -webkit-linear-gradient(45deg, #FAF346, #CE6848);
+                background-image: -moz-linear-gradient(45deg, #FAF346, #CE6848);
+                background-image: linear-gradient(45deg, #FAF346, #CE6848);
+            }
+            .caption small{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand hidden-sm" href="/">全球理财通 - 中国</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">首页</a></li>
+                        <!--
+                        本地理财工具，全球理财工具。方法讨论。
+                        
+                        架构 PHP-YII 或者  Nodejs，兼顾到客户端工具的话选择Nodejs也许比较好，但是可复用的模块太少。
+                        -->
+                        <!--
+                        <li><a href="#" target="_blank">个人资产配比计算器</a></li>
+                        <li><a href="#" target="_blank">全球财富俱乐部 统一登录 全网统一登录</a></li>
+                        <li><a href="#" target="_blank">全球大数据分析</a></li>
+                        <li><a href="#" target="_blank">通胀一览</a></li>
+                        <li><a href="#" target="_blank">房价</a></li>
+                        <li><a href="#" target="_blank">开放平台API</a></li>
+                        <li><a href="#" target="_blank">推荐阅读</a></li>
+                        <li><a href="#" target="_blank">我的资产管理</a></li>
+                        <li><a href="#" target="_blank">推广代销</a></li>
+                        <li><a href="#" target="_blank">全球站点</a></li>
+                        -->
+                        <li><a href="#">关于</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="myCarousel" class="carousel slide">
+            <!-- Indicators 
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol> -->
+            <div class="carousel-inner">
+                <div class="item active masthead">
+                    <div class="masthead-bg"></div>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>
+                                <img src="logo.png" />
+                                <span style=" padding-top: 20px;">理财通</span></h1>
+                            <h2>全球私人理财工具汇总 告别隐性收费，告别莫名奇妙的财务术语，还您一个清晰的真实世界。</h2>
+                            <!--p>
+                                <a class="btn btn-lg btn-primary btn-shadow bs3-link" href="#" target="_blank" role="button">资产配比计算器</a>
+                            </p-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+        </div>        
+        <div class="bc-social">
+            <div class="container">
+                <ul class="bc-social-buttons">
+                    <li>
+                        <a href="http://weibo.com/licaitong" title="理财通官方中文微博" target="_blank"><img src="http://www.bootcss.com/assets/img/Sina_Weibo_Logo_RGB_C_E.png" style="height: 30px;" alt="理财通官方中文微博"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="projects-header page-header">
+                <h2>2013年12月 理财工具 收益月报</h2>
+            </div>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>年化收益</th>
+                        <th>信息来源</th>
+                        <th>本金</th>
+                        <th>年收益</th>
+                        <th>月收益</th>
+                        <th>详情</th>
+                        <th>风险</th>
+                        <th>购买</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>0.35%</td>
+                        <td>中行活期</td>
+                        <td>100万</td>
+                        <td>3500元</td>
+                        <td>291元</td>
+                        <td><a href="http://www.yinhang123.net/wangdian/zhongxingwangdian/12829.html"  target="_blank">详情</a></td>
+                        <td>低风险</td>
+                        <th>神经病才去给银行送钱呢</th>
+                    </tr>                    
+                    <tr>
+                        <td>1</td>
+                        <td>4.8%</td>
+                        <td><a href="http://www.thfund.com.cn/column.dohsmode=searchtopic&pageno=0&channelid=2&categoryid=2435&childcategoryid=2436.htm"  target="_blank">余额宝</a></td>
+                        <td>100万</td>
+                        <td>48000元</td>
+                        <td>4000元</td>
+                        <td><a href="http://www.thfund.com.cn/column.dohsmode=searchtopic&pageno=0&channelid=2&categoryid=2435&childcategoryid=2436.htm"  target="_blank">详情</a></td>
+                        <td>低风险</td>
+                        <th>俺要投资</th>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>6.5%</td>
+                        <td><a href="http://www.cs.ecitic.com/zxzq_tt/index.html" target="_blank">月月薪</a></td>
+                        <td>100万</td>
+                        <td>65000元</td>
+                        <td>5416元</td>
+                        <td><a href="http://www.cs.ecitic.com/zxzq_tt/index.html" target="_blank">详情</a></td>
+                        <td>低风险</td>
+                        <th>俺要投资</th>
+
+                    </tr>   
+                    <tr>
+                        <td>3</td>
+                        <td> > 8%</td>
+                        <td><a href="#" target="_blank">国债逆回购</a></td>
+                        <td>100万</td>
+                        <td> > 80000元</td>
+                        <td> > 6666元</td>
+                        <td><a href="#" target="_blank">详情</a></td>
+                        <td>低风险</td>
+                        <th>联系村长</th>
+
+                    </tr>                      
+                    <tr>
+                        <td>3</td>
+                        <td>10%</td>
+                        <td><a href="http://www.thfund.com.cn/tfzc/msyd.html" target="_blank">天地方中</a></td>
+                        <td>100万</td>
+                        <td>100000元</td>
+                        <td>8333元</td>
+                        <td><a href="http://www.thfund.com.cn/tfzc/msyd.html" target="_blank">详情</a></td>
+                        <td>中等</td>
+                        <th>俺要投资</th>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>12%</td>
+                        <td><a href="http://www.renrendai.com/" target="_blank">人人贷</a></td>
+                        <td>100万</td>
+                        <td>120000元</td>
+                        <td>10000元</td>
+                        <td><a href="http://www.renrendai.com/" target="_blank">详情</a></td>
+                        <td>高</td>
+                        <th>俺要投资</th>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+
+        <div class="container projects">
+            <div class="projects-header page-header">
+                <h2>互联网理财</h2>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="http://8.baidu.com/" title="" target="_blank" onclick="">
+                            <img class="lazy" src="http://8.baidu.com/content/resource/baizhuan_huaxia.png" width="300" height="150"  data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="http://8.baidu.com/" title="" target="_blank" onclick="">百赚<br><small>收益播报 5.498%</small></a>
+                            </h3>
+                            <p>
+                                大品牌保障，超活期收益、0手续费、超百万投资人选择
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="http://8.baidu.com/product/0/detail/0?item_id=4" title="" target="_blank" onclick="">
+                            <img class="lazy" src="http://8.baidu.com/content/resource/baizhuan_jiashi.png" width="300" height="150"  data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="http://8.baidu.com/product/0/detail/0?item_id=4" title="" target="_blank" onclick="">百赚 利滚利版<br><small>收益播报 7.247%</small></a>
+                            </h3>
+                            <p>
+                                2014开年力作，“小白”用户理财入门首选，品牌保障，即买即到、随用随取，将延续“百发”火爆！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="http://8.baidu.com/" title="" target="_blank" onclick="">
+                            <img class="lazy" src="http://8.baidu.com/content/resource/baifa_jiashi.png" width="300" height="150"  data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="http://8.baidu.com/" title="" target="_blank" onclick="">百发<br><small>收益播报 8.17%*</small></a>
+                            </h3>
+                            <p>
+                                【团结就有8%*】全民组团去存款 摇身变成高富帅 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="https://financeprod.alipay.com/fund/index.htm" title="" target="_blank" onclick="">
+                            <img class="lazy" src="https://i.alipayobjects.com/e/201309/11haE5IxGf_src.jpg" width="300" height="150"  data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="https://financeprod.alipay.com/fund/index.htm" title="" target="_blank" onclick="">余额宝<br><small>收益播报 6.5000%</small></a>
+                            </h3>
+                            <p>
+                                支付宝打造的余额理财服务
+                                通过余额宝,用户不仅能够得到收益,还能随时消费支付和转出,像使用支付宝余额一样方便。首期支持天弘基金增利宝货币基金。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="https://trade.1234567.com.cn/reg/step1.aspx" title="" target="_blank" onclick="">
+                            <img class="lazy" src="http://z1.dfcfw.com/2013/8/12/201308121745031387727108.png" width="300" height="150"  data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="https://trade.1234567.com.cn/reg/step1.aspx" title="" target="_blank" onclick="">活期宝<br><small>收益播报 6.2500%</small></a>
+                            </h3>
+                            <p>
+　　充值活期宝享受活期便利7*24小时随时取现、快速到账的同时获得超越定存的收益，另外活期宝还支持全部基金的买入和卖出基金回到活期宝。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="https://8.163.com/" title="" target="_blank" onclick="">
+                            <img class="lazy" src="https://8.163.com/images/activeBg8.jpg" width="300" height="150"  data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="https://8.163.com/" title="" target="_blank" onclick="">网易理财<br><small>12月 31日 23:59:59截止 年化收益6.423% </small></a>
+                            </h3>
+                            <p>
+活期理财
+灵活存取，适合短期有使用预期的资金投资
+收益稳健
+12月24日7日年化收益6.423%，超活期利率16倍
+补贴计划
+网易再送1%补贴2个月
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>        
+        <div class="container projects">
+            <div class="projects-header page-header">
+                <h2>更多的理财工具</h2>
+                <p>化繁为简 公开透明</p>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="/p/headroom.js/" title="" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'headroom'])">
+                            <img class="lazy" src="http://www.bootcss.com/assets/img/layoutit.png" width="300" height="150" data-src="assets/img/headroom.png" alt="Headroom.js" data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="/p/headroom.js/" title="Headroom.js 是一个轻量级、纯 JS 组件，用来隐藏或展现页面上的元素，为你的页面留下更多展示内容的空间。" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'headroom'])">家庭投资计算器<br><small>自动帮您规划投资比例</small></a>
+                            </h3>
+                            <p>
+                                自动帮您规划投资比例，使用业界最优秀的投资计算公式。算一下该怎么理财吧。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="#" title="" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'opencdn'])"><img class="lazy" src="http://www.bootcss.com/assets/img/layoutit.png" width="300" height="150" data-src="assets/img/opencdn.png" alt="Open CDN" data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="#" title="" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'opencdn'])">理财通<br><small>全球化的理财工具</small></a>
+                            </h3>
+                            <p>全球化的理财工具
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="/p/stickup/" title="stickUp能让页面目标元素“固定”在浏览器窗口的顶部" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'stickup'])"><img class="lazy" src="http://www.bootcss.com/assets/img/layoutit.png" width="300" height="150" data-src="assets/img/stickup.png" alt="stickUp" data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="/p/stickup/" title="stickUp能让页面目标元素“固定”在浏览器窗口的顶部" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'stickup'])">全球财务大数据<br><small>真实的数据，了解您资产的价值</small></a>
+                            </h3>
+                            <p>
+                                今年中国预期通胀8%，往年通胀12%。美国预期通胀，往年通胀。 其他国家投资收益率。 什么狗屎环比同比， 全球各大城市房价与收入比 每月发布。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="/p/lesscss/" title="LESS一种动态样式语言" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'lesscss'])"><img class="lazy" src="http://www.bootcss.com/assets/img/layoutit.png" width="300" height="150" data-src="assets/img/lesscss.png" alt="LESSCSS" data-pinit="registered"></a>
+                        <div class="caption">
+                            <h3> 
+                                <a href="/p/lesscss/" title="Grunt是基于Node.js的项目构建工具。" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'lesscss'])">理财通客户端<br><small>android/ios/winCE</small></a>
+                            </h3>
+                            <p>
+                                随时随地通过客户端获取最新的理财资讯，同一账户跨平台。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+
+        <div class="container projects">
+            <div class="projects-header page-header">
+                <h2>合作伙伴</h2>
+                <p></p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="http://www.taobao.com/" title="淘宝网" target="_blank" >
+                            <img class="lazy" src="http://z1.dfcfw.com/2010/11/11/20101111021322389252370.gif" width="300" height="150" data-pinit="registered">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 ">
+                    <div class="thumbnail">
+                        <a href="http://www.gesafe.com/" title="格上理财" target="_blank" >
+                            <img class="lazy" src="http://z1.dfcfw.com/2013/12/24/20131224111736676657902.jpg" width="300" height="150" data-pinit="registered">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer class="footer ">
+            <p>本站所有信息均来自网络，投资者请自行判断。投资有风险入行需谨慎。</p>
+            有其他好的理财途径想填进去的告诉我 <a href="mailto:charlie19817@gmail.com" target="_blank"  >charlie19817@gmail.com</a>
+            <p>Powered By <a href="http://n.app-net.org/" target="_blank" title="PPLBOY">N+开发组</a></p>
+            <p>
+                <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备8888888号</a>
+            </p>
+
+            感谢： WEB前端导航 YIICMS NODEJS SELLDOMIN NODE-CLOUD PAYPAL GITHUB
+        </footer-->
+    </body>
+</html>
