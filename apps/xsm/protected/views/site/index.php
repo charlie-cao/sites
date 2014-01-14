@@ -3,7 +3,7 @@
 
 $this->pageTitle = Yii::app()->name;
 ?>
-<form action="<?=Yii::app()->request->baseUrl?>" method="post">
+<form action="<?=$this->createUrl('site/index')?>" method="post">
     <table>
         <tr>
             <th>日期<input id="c_date" name="c_date" type="text" value="<?= date("Y-m-d") ?>"/></th>
