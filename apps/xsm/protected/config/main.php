@@ -10,6 +10,9 @@ return array(
         
 	'name'=>'小小理财',
 //	'name'=>'小私募 平台',
+	//默认语言
+	'language'=>'zh_cn',
+        'timeZone'=>'Asia/Chongqing',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
