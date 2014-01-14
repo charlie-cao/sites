@@ -42,7 +42,8 @@ class SiteController extends Controller {
                 var_dump($shouyi->getErrors());
             }
         }
-        $data['shouyi'] = Shouyi::model()->findAll();
+        $sql = "select * from tbl_shouyi order by c_date asc,id desc limit 100";
+        $data['shouyi'] = Shouyi::model()->findAllBySql($sql);
         $this->render('index', $data);
     }
 
