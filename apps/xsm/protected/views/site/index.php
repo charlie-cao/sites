@@ -31,7 +31,7 @@ $this->pageTitle = Yii::app()->name;
             <td><?=$val->shouyi?>元</td>
             <td><?=($val->shouyi/$val->benjin)*10000?>元</td>
             <td><?=($val->shouyi*360/$val->benjin)*100?>%</td>
-            <td>空</td>
+            <td><?=($val->shouyi*360/$val->benjin)*100?>%</td>
             <td><a href="<?=$this->createUrl('site/index',array('id'=>$val->id))?>">删除</a>
             </td>
         </tr>
