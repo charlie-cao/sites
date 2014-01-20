@@ -38,7 +38,7 @@ class SiteController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('login'),
+                'actions' => array('login','index1','logout'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -49,6 +49,11 @@ class SiteController extends Controller {
                 'users' => array('*'),
             ),
         );
+    }
+    
+    public function actionIndex1(){
+        echo kao;
+        exit;
     }
 
     /**
