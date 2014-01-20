@@ -21,15 +21,48 @@ class SiteController extends Controller {
     }
 
     /**
+     * @return array action filters
+     */
+    public function filters() {
+        return array(
+            'accessControl', // perform access control for CRUD operations
+            'postOnly + delete', // we only allow deletion via POST request
+        );
+    }
+
+    /**
+     * Specifies the access control rules.
+     * This method is used by the 'accessControl' filter.
+     * @return array access control rules
+     */
+    public function accessRules() {
+        return array(
+            array('allow', // allow authenticated user to perform 'create' and 'update' actions
+                'actions' => array('login'),
+                'users' => array('*'),
+            ),
+            array('allow', // allow authenticated user to perform 'create' and 'update' actions
+                'actions' => array('index'),
+                'users' => array('@'),
+            ),
+            array('deny', // deny all users
+                'users' => array('*'),
+            ),
+        );
+    }
+
+    /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.
      */
     public function actionIndex() {
 
-        if (isset($_GET['id']) && $_GET['id']>0) {
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
             $shouyi = Shouyi::model()->findByPk($_GET['id']); // 假设有一个帖子，其 ID 为 10
             $shouyi->delete();
         }
+
+        //保存
         if ($_POST) {
             //保存用户提交
             $shouyi = new Shouyi;
@@ -42,8 +75,19 @@ class SiteController extends Controller {
                 var_dump($shouyi->getErrors());
             }
         }
-        $sql = "select * from tbl_shouyi order by c_date asc,id desc limit 100";
+
+        //获取所有列表
+        $sql = "select * from tbl_shouyi order by c_date desc,id desc limit 100";
         $data['shouyi'] = Shouyi::model()->findAllBySql($sql);
+
+        //获取昨天的本金
+        $sql = "select * from tbl_shouyi where c_date = '" . (strtotime(date("Y-m-d")) - 60 * 60 * 24) . "'";
+        $last_day = Shouyi::model()->findBySql($sql);
+//        var_dump($res);
+//        echo (strtotime(date("Y-m-d"))-60*60*24);
+//        var_dump($data);
+        //当天本金
+        $data['day_benjin'] = $last_day->benjin + $last_day->shouyi;
         $this->render('index', $data);
     }
 
