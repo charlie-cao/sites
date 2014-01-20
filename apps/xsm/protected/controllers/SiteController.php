@@ -94,7 +94,9 @@ class SiteController extends Controller {
 //        echo (strtotime(date("Y-m-d"))-60*60*24);
 //        var_dump($data);
         //当天本金
-        $data['day_benjin'] = $last_day->benjin + $last_day->shouyi;
+        if ($last_day) {
+            $data['day_benjin'] = $last_day->benjin + $last_day->shouyi;
+        }
         $this->render('index', $data);
     }
 
