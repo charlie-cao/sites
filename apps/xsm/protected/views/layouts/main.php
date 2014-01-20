@@ -29,14 +29,14 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'首页', 'url'=>array('/site/index1')),
+//				array('label'=>'首页', 'url'=>array('/site/index1')),
 				array('label'=>'收益日记', 'url'=>array('/site/index')),
-				array('label'=>'收益日记(admin)', 'url'=>array('/shouyi/index')),
+//				array('label'=>'收益日记(admin)', 'url'=>array('/shouyi/index')),
 				//array('label'=>'资产负债表', 'url'=>array('/site/index')),
 				//array('label'=>'日收益转换器', 'url'=>array('/site/index')),
 				//array('label'=>'本金收益汇总表', 'url'=>array('/site/index')),
-				array('label'=>'关于', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'留言', 'url'=>array('/site/contact')),
+//				array('label'=>'关于', 'url'=>array('/site/page', 'view'=>'about')),
+//				array('label'=>'留言', 'url'=>array('/site/contact')),
 				array('label'=>'登入', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'退出 ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
