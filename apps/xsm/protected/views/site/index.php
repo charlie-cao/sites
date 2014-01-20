@@ -6,27 +6,27 @@ $this->pageTitle = Yii::app()->name;
 <table>
     <tr>
         <th>每日收益</th>
-        <!--th>进出帐</th-->
+        <th>进出帐</th>
         <th>资产配比</th>
     </tr>
     <tr>
     <form action="<?= $this->createUrl('site/index') ?>" method="post">
         <td>
-            记录日期<input id="c_date" name="c_date" type="text" value="<?= date("Y-m-d") ?>"/>
-            <br/>当前资产<input id="benjin" name="benjin" type="text" value="<?= $day_benjin ?>"/>元
-            <br/>进出账<input id="shouyi" name="shouyi" type="text" value="1"/>元
+            日期<input id="c_date" name="c_date" type="text" value="<?= date("Y-m-d") ?>"/>
+            <br/>当日本金<input id="benjin" name="benjin" type="text" value="<?= $day_benjin ?>"/>元
+            <br/>当日收益<input id="shouyi" name="shouyi" type="text" value="1"/>元
             <br/><input id="jisuan" type="submit" value="保存"/>
             <br/>使用元为单位 可以精确到每厘比如122.122
         </td>
     </form>
-    <!--form action="<?= $this->createUrl('site/jinchuzhang') ?>" method="post">
+    <form action="<?= $this->createUrl('site/jinchuzhang') ?>" method="post">
         <td>
             进出帐<input id="shouyi" name="shouyi" type="text" value=""/>元
             <br/>类型： 存款 基金 债券 外汇 自定义
             <br/>备注<input id="shouyi" name="shouyi" type="text" value=""/>
             <br/><input id="jisuan" type="submit" value="保存"/>
         </td>
-    </form-->
+    </form>
     <td>
         股票:11111
         <br/>债券:11111
