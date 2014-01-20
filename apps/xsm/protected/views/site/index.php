@@ -3,17 +3,34 @@
 
 $this->pageTitle = Yii::app()->name;
 ?>
-<form action="<?=$this->createUrl('site/index')?>" method="post">
-    <table>
-        <tr>
-            <th>日期<input id="c_date" name="c_date" type="text" value="<?= date("Y-m-d") ?>"/></th>
-            <th>当日本金<input id="benjin" name="benjin" type="text" value="10000"/>元</th>
-            <th>当日收益<input id="shouyi" name="shouyi" type="text" value="1"/>元</th>
-            <th><input id="jisuan" type="submit" value="保存"/></th>
-            <th style="color: red">使用元为单位 可以精确到每厘比如122.122</th>
-        </tr>
-    </table>
-</form>
+<table>
+    <tr>
+        <th>每日收益</th>
+        <th>进出帐</th>
+    </tr>
+    <tr>
+    <form action="<?= $this->createUrl('site/index') ?>" method="post">
+        <td>
+            日期<input id="c_date" name="c_date" type="text" value="<?= date("Y-m-d") ?>"/>
+            当日本金<input id="benjin" name="benjin" type="text" value="<?= $day_benjin ?>"/>元
+
+            当日收益<input id="shouyi" name="shouyi" type="text" value="1"/>元
+            <input id="jisuan" type="submit" value="保存"/>
+            使用元为单位 可以精确到每厘比如122.122
+
+        </td>
+    </form>
+    <form action="<?= $this->createUrl('site/jinchuzhang') ?>" method="post">
+        <td>
+            进出帐<input id="shouyi" name="shouyi" type="text" value=""/>元
+            原因<input id="shouyi" name="shouyi" type="text" value=""/>
+            <input id="jisuan" type="submit" value="保存"/>
+        </td>
+    </form>
+</tr>
+</table>
+
+
 <table>
     <tr>
         <th>日期</th>
@@ -26,14 +43,25 @@ $this->pageTitle = Yii::app()->name;
     </tr>
     <?php foreach ($shouyi as $key => $val) { ?>
         <tr>
-            <td><?=date("Y-m-d",$val->c_date)?></td>
-            <td><?=$val->benjin?>元</td>
-            <td><?=$val->shouyi?>元</td>
-            <td><?=($val->shouyi/$val->benjin)*10000?>元</td>
-            <td><?=($val->shouyi*360/$val->benjin)*100?>%</td>
-            <td><?=($val->shouyi*360/$val->benjin)*100?>%</td>
-            <td><a href="<?=$this->createUrl('site/index',array('id'=>$val->id))?>">删除</a>
+            <td><?= date("Y-m-d", $val->c_date) ?></td>
+            <td><?= $val->benjin ?>元</td>
+            <td><?= $val->shouyi ?>元</td>
+            <td><?= ($val->shouyi / $val->benjin) * 10000 ?>元</td>
+            <td><?= ($val->shouyi * 360 / $val->benjin) * 100 ?>%</td>
+            <td><?= ($val->shouyi * 360 / $val->benjin) * 100 ?>%</td>
+            <td><a href="<?= $this->createUrl('site/index', array('id' => $val->id)) ?>">删除</a>
             </td>
         </tr>
     <?php } ?>
 </table>
+<pre>
+资产收益平衡表 使用说明：
+1.初始化：将所有的款项汇总，记个总数下来。使用进账录入
+2.日常操作：
+  1 推荐每日进行收益汇总，将收益汇总，计入收益项目。
+  2 进账: 发工资 或者其他进账时候   计入正值
+  3 出账：每次银行取款，以及信用卡还款时    计入负值
+3 记错了的时候，将数据项标记为删除，重新记账。
+4 如能养成习惯每日记录，将清晰的表现出您的资产的盈利能力。
+没了。
+</pre>
