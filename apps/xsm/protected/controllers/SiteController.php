@@ -38,7 +38,7 @@ class SiteController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('login','index1','logout'),
+                'actions' => array('login', 'index1', 'logout'),
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -50,10 +50,10 @@ class SiteController extends Controller {
             ),
         );
     }
-    
-    public function actionIndex1(){
+
+    public function actionIndex1() {
         $data = array();
-        $this->render('index1', $data);        
+        $this->render('index1', $data);
     }
 
     /**
@@ -67,6 +67,7 @@ class SiteController extends Controller {
             $shouyi->delete();
         }
 
+
         //保存
         if ($_POST) {
             //保存用户提交
@@ -74,6 +75,7 @@ class SiteController extends Controller {
             $shouyi->benjin = $_POST['benjin'];
             $shouyi->shouyi = $_POST['shouyi'];
             $shouyi->c_date = strtotime($_POST['c_date']);
+            $shouyi->uid = Yii::app()->user->getId();
             if ($shouyi->save()) {
                 
             } else {
@@ -82,11 +84,11 @@ class SiteController extends Controller {
         }
 
         //获取所有列表
-        $sql = "select * from tbl_shouyi order by c_date desc,id desc limit 100";
+        $sql = "select * from tbl_shouyi where uid='" . Yii::app()->user->getId() . "' order by c_date desc,id desc limit 100";
         $data['shouyi'] = Shouyi::model()->findAllBySql($sql);
 
         //获取昨天的本金
-        $sql = "select * from tbl_shouyi where c_date = '" . (strtotime(date("Y-m-d")) - 60 * 60 * 24) . "'";
+        $sql = "select * from tbl_shouyi where c_date = '" . (strtotime(date("Y-m-d")) - 60 * 60 * 24) . "' and uid='" . Yii::app()->user->getId() . "'";
         $last_day = Shouyi::model()->findBySql($sql);
 //        var_dump($res);
 //        echo (strtotime(date("Y-m-d"))-60*60*24);
