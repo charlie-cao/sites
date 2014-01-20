@@ -52,8 +52,8 @@ class SiteController extends Controller {
     }
     
     public function actionIndex1(){
-        echo kao;
-        exit;
+        $data = array();
+        $this->render('index1', $data);        
     }
 
     /**
