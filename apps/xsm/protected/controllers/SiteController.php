@@ -96,6 +96,8 @@ class SiteController extends Controller {
         //当天本金
         if ($last_day) {
             $data['day_benjin'] = $last_day->benjin + $last_day->shouyi;
+        }else{
+            $data['day_benjin'] = 1;
         }
         $this->render('index', $data);
     }
