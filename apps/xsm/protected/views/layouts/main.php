@@ -29,8 +29,9 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-//				array('label'=>'首页', 'url'=>array('/site/index1')),
+				array('label'=>'最新理财工具', 'url'=>array('/site/index1')),
 				array('label'=>'收益日记', 'url'=>array('/site/index')),
+				array('label'=>'资产配比', 'url'=>array('/site/allocations')),
 //				array('label'=>'收益日记(admin)', 'url'=>array('/shouyi/index')),
 				//array('label'=>'资产负债表', 'url'=>array('/site/index')),
 				//array('label'=>'日收益转换器', 'url'=>array('/site/index')),
