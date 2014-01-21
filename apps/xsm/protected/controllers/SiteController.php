@@ -42,7 +42,7 @@ class SiteController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('index'),
+                'actions' => array('index','allocations'),
                 'users' => array('@'),
             ),
             array('deny', // deny all users
@@ -54,6 +54,11 @@ class SiteController extends Controller {
     public function actionIndex1() {
         $data = array();
         $this->render('index1', $data);
+    }
+    
+    public function actionAllocations(){
+        $data = array();
+        $this->render("asset_allocations",$data);
     }
 
     /**
@@ -90,6 +95,16 @@ class SiteController extends Controller {
         //获取昨天的本金
         $sql = "select * from tbl_shouyi where c_date = '" . (strtotime(date("Y-m-d")) - 60 * 60 * 24) . "' and uid='" . Yii::app()->user->getId() . "'";
         $last_day = Shouyi::model()->findBySql($sql);
+        
+//        //计算7日年化收益
+//        $sql = "select * from tbl_shouyi where c_date <= '" . (strtotime(date("Y-m-d")) - 60 * 60 * 24) . "' and uid='" . Yii::app()->user->getId() . "' order by c_date desc,id desc limit 7";
+//        $day_7 = Shouyi::model()->findAllBySql($sql);
+//        
+//        //计算7日年化收益
+//        foreach($day_7 as $day){
+//            
+//        }
+        
 //        var_dump($res);
 //        echo (strtotime(date("Y-m-d"))-60*60*24);
 //        var_dump($data);
