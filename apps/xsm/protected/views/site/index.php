@@ -61,7 +61,7 @@ $this->pageTitle = Yii::app()->name;
         </tr>
     <?php } ?>
 </table>
-
+资产总收益 <b><?=$countshouyi?></b> 天数<b><?= $dayshouyi=count($shouyi); ?></b> 平均日收益 <b><?=$countshouyi/$dayshouyi?></b> 最终本金
 <pre>
 资产收益平衡表 使用说明：
 1.初始化：将所有的款项汇总，记个总数下来。使用进账录入
