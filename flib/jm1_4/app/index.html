@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../jquery.mobile-1.4.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="../jquery.mobile-1.4.0.min.js"></script>
+    </head>
+    <body>
+
+        <!-- Start of first page -->
+        <div data-role="page" id="foo">
+
+            <div data-role="header">
+                <h1>Foo</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p>I'm first in the source order so I'm shown as the page.</p>
+                <p>View internal page called <a href="#bar">bar</a></p>
+
+                <a href="#" class="ui-btn">Anchor</a>
+                <button class="ui-btn">Button</button>
+                <ul data-role="listview" data-inset="true" data-filter="true">
+                    <li><a href="#">Acura</a></li>
+                    <li><a href="#">Audi</a></li>
+                    <li><a href="#">BMW</a></li>
+                    <li><a href="#">Cadillac</a></li>
+                    <li><a href="#">Ferrari</a></li>
+                </ul>
+            </div><!-- /content -->
+
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star" class="ui-btn-active">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+
+            <div data-role="footer" data-position="fixed" class="nav-glyphish-example" data-theme="b">
+                <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+                    <ul>
+                        <li><a href="#" id="chat" data-icon="custom">Chat</a></li>
+                        <li><a href="#" id="email" data-icon="custom">Email</a></li>
+                        <li><a href="#" id="skull" data-icon="custom">Danger</a></li>
+                        <li><a href="#" id="beer" data-icon="custom">Beer</a></li>
+                        <li><a href="#" id="coffee" data-icon="custom">Coffee</a></li>
+                    </ul>
+                </div>
+            </div>            
+        </div><!-- /page -->
+
+        <!-- Start of second page -->
+        <div data-role="page" id="bar">
+
+            <div data-role="header">
+                <h1>Bar</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+                <p><a href="#foo">Back to foo</a></p>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+    </body>
+</html>
